@@ -1,14 +1,19 @@
 
 // Feito por Guilherme Leão - ADS 3º semestre para ajudar os iniciantes.
-
+// Anotações básicas e úteis no fim do programa.
 
 /*
+
+Ordem:
 
 - Usando bibliotecas
 - Começando o programa
 - Apresentação printf/scanf
+- Condicionais : if/else
+- Condicionais : switch/case
 - Trabalhando com vetores e laço de repetição while
 - Trabalhado com String 1
+- Quebrando um laço com break
 - Utilizando o laço do while e o laço for
 
 
@@ -18,9 +23,12 @@
 
 // Precisamos das bibliotecas para usar funções "pré feitas" da linguagem, sem elas o programa não funcionará. Podemos fazer nossas bibliotecas, entraremos nisso depois.
 
-#include<stdio.h> // Biblioteca para funções basicas (printf, scanf).
-#include<stdlib.h>// Biblioteca com outras funções, system("pause"), system("cls").
-#include<locale.h>// Biblioteca para alterar idiomas.
+#include<stdio.h>  // Biblioteca para funções basicas (printf, scanf).
+#include<stdlib.h>  // Biblioteca com outras funções, system("pause"), system("cls").
+#include<locale.h>  // Biblioteca para alterar idiomas.
+
+
+
 
 
 
@@ -29,6 +37,11 @@
 int main(void){ // Chamando a função principal, onde o programa começa. Usamos o "int" e o "void" para evitar problemas ocasionais, porém funciona apenas main(). Devemos abrir e fechar a função com { no começo e } no fim.
 	
 	setlocale(LC_ALL, "portuguese"); //Setando o idioma do arquivo como português, se não, acentos e caracteres da nossa linguagem irão bugar.
+	
+	
+	
+	
+	
 	
 	//Fazendo apenas apresentação do printf e scanf
 	
@@ -49,8 +62,87 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	scanf("%c",&caractere); // Scaneando do tipo char, %c.
 	
-	printf("\nEscrevi em inteiro: %d.\nEscrevi em caractere: %c.\n",inteiro,caractere); //Escrevendo na tela o valor das variaveis int e char.
+	printf("\nEscrevi em inteiro: %d.\nEscrevi em caractere: %c.\n",inteiro,caractere); //Escrevendo na tela o valor das variaveis int e char, deve colocar o nome das variaveis fora das aspas.
 	
+	system("pause"); // Pausa o programa até algum botão ser apertado.
+	
+	
+	
+	
+	
+	
+	
+	// Usando if e else
+	
+	system("cls"); // Função para limpar a tela do programa para melhor visualização.
+	
+	int usandoIf;
+	
+	printf("Digite um número e veja se é par: "); 
+	
+	scanf("%d",&usandoIf);
+	
+	if(usandoIf % 2 == 0){ // No caso estamos fazendo uma condição. If (se) a variavel ter o resto 0 dividindo por 2 (usando o % para obter o resto), ele escreve na tela que o número é par. 
+		
+		printf("\nO número é par!\n");
+		
+	}
+	else{ // Else(senão), escreve na tela que o número é ímpar.  
+		
+		printf("\nO número é ímpar!\n");
+		
+	}	// Lembrando que podemos usar ifs e elses encadeados, um dentro do outro. E também, nunca pode existir um else sem um if.
+		
+
+
+
+
+
+
+	// Usando switch/case
+	
+	char usandoSC;
+	
+	printf("\nDigite o seu sexo: "); 
+	
+	fflush(stdin);
+	
+	scanf("%c",&usandoSC);
+	
+	switch(usandoSC){ // Para utilizar o switch, chamamos a função "switch(){ }" e vamos usar o nome da variavel nos parenteses (parâmetro). 
+		
+	case 'm':										// caso o usuário tenha digitado m (ou masculino, já que char só vai pegar a primeira letra):
+		printf("\nSeu sexo é masculino\n");  		// Escreve que o sexo é masculino
+		break;										// break quebra o switch e passa para a próxima instrução
+		
+	case 'M':										// Mesma coisa do de cima, mas como a linguagem é case sensitive, temos que fazer maiusculo, vamos aprender como burlar isso depois.
+		printf("\nSeu sexo é masculino\n");
+		break;
+		
+	case 'f':
+		printf("\nSeu sexo é feminino\n");
+		break;
+		
+	case 'F':
+		printf("\nSeu sexo é feminino\n");
+		break;
+		
+	default:																	//default é acionado caso nenhuma das condições serem resolvidas. É o "else" do switch.
+		printf("\nO programa só funciona com sexo masculino e feminino\n");	
+			
+		
+	}
+		
+	system("pause");
+		
+	system("cls");
+
+
+	
+	
+	
+
+
 	//Trabalhando com vetores e laço while
 	
 	int vetor[5] = {0,0,0,0,0} ; //Criando um vetor (variável com várias posições), de 5 posições (0-4) e inicializando ele.
@@ -72,7 +164,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	}
 	
-	system("cls"); // Função para limpar a tela do programa para melhor visualização.
+	system("cls");
 	
 	contador = 0; // Atribuimos 0 ao contador para utilizar de novo da mesma forma.
 	
@@ -86,10 +178,17 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	printf("\n\n"); // Print apenas para pular linhas no programa.
 	
-	system("pause"); // Pausa o programa até algum botão ser apertado.
+	system("pause");
 	
 	system("cls");
 	
+
+
+
+
+
+
+
 	// Trabalhando com Strings
 	
 	char cadeia[20]; // Criando um vetor de caracteres para poder trabalhar com String, ou cadeia de caracteres, usado por exemplo para digitar um nome.
@@ -106,6 +205,42 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	system("cls");
 	
+
+	
+	
+	
+	
+	
+	//Quebrando um laço usando break
+	
+	
+		while(2>1){										//Esse loop de while, tem uma condição que o deixa infinito, 2 sempre será maior que 1, ou seja, impossível de acabar.
+			
+			char auxiliar;
+			
+			printf("\nDigite algo para continuar o loop e X para sair: ");
+			
+			fflush(stdin);
+			
+			scanf("%c",&auxiliar);
+			
+			if(auxiliar == 'x' || auxiliar == 'X'){   	//Fazemos aqui um if, que toda vez que algo é digitado, verifica se o que o usuario escreveu é X ou x (usamos o OR por causa do case sensitive).
+														//Se o que estiver na variável for X, o loop quebra e passa para a próxima instrução, senão o loop continua escrevendo.	
+				printf("\n Você saiu do loop!");        //Essa é a melhor maneira de fazer um programa para cadastrar pessoas seguidas em algo por exemplo.
+				break;
+			}
+			
+			printf("\nO Guigui é lindo\n");
+			
+			
+		}
+
+	
+
+
+
+
+
 	// Utilizando o laço do while e o laço for
 	
 	int vetorDW[5]; // Vetor para trabalhar com o laço.
@@ -145,6 +280,12 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	return 0; // Fazemos isso para evitar bugs, retorno padrão do main.
 }
 
+
+
+
+
+
+
   // Anotações extras:
   
 // /* Utilizano duas barras (//) fazemos um comentário, não altera o código, apenas anota algo que o programador julga útil para fazer a manutenção do código.
@@ -152,6 +293,8 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 // Isso faz com que tudo que esteja dentro, seja comentado. O comentário é útil para testar o código sem ter que apagar algo. Ao invés de apagar algo para arrumar, apenas deixe a parte comentada.
 
 /*
+
+	A regra principal é: o usuário é burro. Devemos tentar prever todas as formas de quebrar o programa para arrumar antes, pois se elas existirem, vão acabar sendo usadas.
 
 	Lembrando sempre que C é uma linguagem case sensitve, ou seja, diferencia maiúsculas de minúsculas. Tome cuidado ao escrever.
 
@@ -162,6 +305,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	-  = Subtação
 	*  = Multiplicação
 	/  = Divisão
+	%  = Mod (resto)
 	|| = OR
 	&& = AND
 	!  = NOT
@@ -197,4 +341,19 @@ string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determi
 %s = string
 
 */
+
+
+/* 
+
+
+
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!! IMPORTANTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ 
+ 
+  							NUNCA, EU DISSE NUNCA, use goto na sua vida. Vai ferrar tudo e quebrar e você vai odiar a existência e vai xigar eu vizinho.
+ 
+ 
+ 
+ */
 
