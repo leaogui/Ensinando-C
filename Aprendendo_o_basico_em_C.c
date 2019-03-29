@@ -3,6 +3,8 @@
 
 
 /*
+
+- Usando bibliotecas
 - Começando o programa
 - Apresentação printf/scanf
 - Trabalhando com vetores e laço de repetição while
@@ -11,6 +13,10 @@
 
 
 */
+
+// Usando bibliotecas
+
+// Precisamos das bibliotecas para usar funções "pré feitas" da linguagem, sem elas o programa não funcionará. Podemos fazer nossas bibliotecas, entraremos nisso depois.
 
 #include<stdio.h> // Biblioteca para funções basicas (printf, scanf).
 #include<stdlib.h>// Biblioteca com outras funções, system("pause"), system("cls").
@@ -26,7 +32,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	//Fazendo apenas apresentação do printf e scanf
 	
-	int inteiro; //Declarando uma variavel do tipo int (inteiro).
+	int inteiro =0; //Declarando uma variavel do tipo int (inteiro) e inicializando ela, útil para evitar bugs em alguns programas menores como esse, em programs maiores talvez não seja tão vantajoso.
 	
 	char caractere; //Declarando uma variavel do tipo char.
 	
@@ -34,7 +40,8 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	printf("Digite um número para ser feliz: "); // Printando para o usuario escrever algo.
 	
-	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotações no fim do programa).
+	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotações no fim do programa). Lembrando que se digitarmos um caractere, o programa irá bugar totalmente.
+						  // Lembrando que em um scanf nunca podemos esquecer o "&", pois isso significa que o que estamos digitando, está indo para o endereço de memória da váriavel escrita depois dele. 1 "&" = endereçamento.
 	
 	printf("\nDigite uma letra para ser feliz em dobro: ");
 	
@@ -46,7 +53,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	//Trabalhando com vetores e laço while
 	
-	int vetor[5]; //Criando um vetor (variável com várias posições), de 5 posições (0-4).
+	int vetor[5] = {0,0,0,0,0} ; //Criando um vetor (variável com várias posições), de 5 posições (0-4) e inicializando ele.
 	
 	int contador = 0; //Criando um contador para auxiliar no while.
 		
@@ -127,7 +134,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
 	}
 	
-	puts("\n");
+	puts("\n"); // A função puts significa "put string", que nada mais é que printa algo na tela, porém não recebe variaveis como o printf, apenas strings. Como vamos apenas pular linhas, é mais rápido escrever puts que printf.
 	
 	
 	printf("Este foi seu primeiro programa!\n\n");
@@ -170,6 +177,8 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
 
 Uso de variaveis:
+
+Ao declarar uma variavel, você armazena um espaço na memória para ela. Falaremos do tamanho de cada variavel abaixo.
 
 Devemos lembrar que em computação, sempre estamos de uma maneira ou de outra trabalhando com binários. 
 Então, 8 bits em binário equivalem a 1 byte. Logo, em 1 byte podemos representar um número em binário até 8 bits, (255, lembrando que sempre começamos em 0).
