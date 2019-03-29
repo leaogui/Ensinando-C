@@ -7,6 +7,7 @@
 - Apresentação printf/scanf
 - Trabalhando com vetores e laço de repetição while
 - Trabalhado com String 1
+- Utilizando o laço do while e o laço for
 
 
 */
@@ -21,7 +22,7 @@
 
 int main(void){ // Chamando a função principal, onde o programa começa. Usamos o "int" e o "void" para evitar problemas ocasionais, porém funciona apenas main(). Devemos abrir e fechar a função com { no começo e } no fim.
 	
-	setlocale(LC_ALL, "portuguese"); //Setando o idioma do arquivo como portugues.
+	setlocale(LC_ALL, "portuguese"); //Setando o idioma do arquivo como português, se não, acentos e caracteres da nossa linguagem irão bugar.
 	
 	//Fazendo apenas apresentação do printf e scanf
 	
@@ -88,11 +89,46 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	printf("\nDigite um nome bem bonito: ");
 	
-	fflush(stdin);
+	fflush(stdin); // Como uma string são vários chars, precisamos do fflush.
 
 	fgets(cadeia,20,stdin);	// Escaneando uma string, se usar scanf para fazer isso, ele não irá ler o espaço. 20 é o número de dígitos.
 	
 	printf("O nome digitado foi: %s\n\n", cadeia); //Printando a string que escreveu com %s.
+	
+	system("pause");
+	
+	system("cls");
+	
+	// Utilizando o laço do while e o laço for
+	
+	int vetorDW[5]; // Vetor para trabalhar com o laço.
+	
+	contador = 0; // zeramos o contador novamente para auxiliar.
+	
+	
+	do{ // O laço do while funciona de maneira semelhante ao while, a difereça é: o laço while irá verificar se a condição é resolvida no começo do laço, o do while verifica se isso acontece no fim do laço.
+	
+	printf("\nDigite um número bem massa: ");
+			
+	scanf("%d",&vetorDW[contador]);											
+	
+	contador++;
+		
+	}while(contador < 5); // Devemos colocar "do", abrir e fechar as chaves, e no fim colocar o "while" igual ao próprio laço while. Toda vez adicionamos +1 em contador, e quando chega em 5, o laço quebra e continua o programa (verificando no final). 
+	
+	
+	
+	for(contador=0;contador<5;contador++){ // Para verificar se o laço do while funcionou, vamos usar o laço for para printar o vetor na tela.
+										   // Devemos estruturar o for de tal maneira: for("O número que você deseja que a variavel inicie (no caso queremos que comece no 0)";"A condição limite que você deseja (no caso, queremos que pare quando contador passar de 4)";"a condição para passar o número da condição(no caso queremos que adicione 1 ao contador toda vez que o loop aconteça)")
+										   // Outro exemplo: for(teste=30;teste=0;teste--){ "Conteudo dentro do laço" }, no caso o laço vai se repetir até "teste" descer de 30 para 0.
+											
+									
+	printf("\nVetor posição %d: %d", contador+1,vetorDW[contador]);
+
+	}
+	
+	puts("\n");
+	
 	
 	printf("Este foi seu primeiro programa!\n\n");
 	
@@ -109,6 +145,8 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 // Isso faz com que tudo que esteja dentro, seja comentado. O comentário é útil para testar o código sem ter que apagar algo. Ao invés de apagar algo para arrumar, apenas deixe a parte comentada.
 
 /*
+
+	Lembrando sempre que C é uma linguagem case sensitve, ou seja, diferencia maiúsculas de minúsculas. Tome cuidado ao escrever.
 
  Operadores:
 
@@ -129,7 +167,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
  
 	Para facilitar a vida, podemos ao invés de fazer a = a + b ao fazer uma operação, podemos fazer a += b, ou a -= b, e por ai vai. O resultado é o mesmo.
 
-/*
+
 
 Uso de variaveis:
 
