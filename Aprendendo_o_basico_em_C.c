@@ -2,6 +2,15 @@
 // Feito por Guilherme Leão - ADS 3º semestre para ajudar os iniciantes.
 
 
+/*
+- Começando o programa
+- Apresentação printf/scanf
+- Trabalhando com vetores e laço de repetição while
+- Trabalhado com String 1
+
+
+*/
+
 #include<stdio.h> // Biblioteca para funções basicas (printf, scanf).
 #include<stdlib.h>// Biblioteca com outras funções, system("pause"), system("cls").
 #include<locale.h>// Biblioteca para alterar idiomas.
@@ -20,11 +29,11 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	char caractere; //Declarando uma variavel do tipo char.
 	
-	printf("O C é bonito\n\n"); // Printando na tela algo, o \n pula uma linha, para deixar tudo mais fácil de ler..
+	printf("O C é bonito\n\n"); // Printando algo na tela, o \n pula uma linha, para deixar tudo mais fácil de ler..
 	
 	printf("Digite um número para ser feliz: "); // Printando para o usuario escrever algo.
 	
-	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d.
+	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotações no fim do programa).
 	
 	printf("\nDigite uma letra para ser feliz em dobro: ");
 	
@@ -34,16 +43,16 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	printf("\nEscrevi em inteiro: %d.\nEscrevi em caractere: %c.\n",inteiro,caractere); //Escrevendo na tela o valor das variaveis int e char.
 	
-	//Trabalhando com vetores
+	//Trabalhando com vetores e laço while
 	
-	int vetor[5]; //Criando um vetor (Variável com várias posições), de 5 posições (0-4).
+	int vetor[5]; //Criando um vetor (variável com várias posições), de 5 posições (0-4).
 	
 	int contador = 0; //Criando um contador para auxiliar no while.
 		
 	
-	while(contador < 5){ // Laço de repetição while, irá repetir o que está dentro até a sua condição ser resolvida. No caso, enquanto contador for menor que 5, continua fazendo.
-						 // Usamos menor que 5 pois o vetor com 5 posições começa do 0 e vai até o 4. Estamos adicionando 1 no contador sempre que o laço se repete.
-						 // Devemos usar "{ }" para determinar onde o while começa e termina.
+	while(contador < 5){ /*Laço de repetição while, irá repetir o que está dentro até a sua condição ser resolvida. No caso, enquanto contador for menor que 5, continua fazendo.
+						   Usamos menor que 5 pois o vetor com 5 posições começa do 0 e vai até o 4. Estamos adicionando 1 no contador sempre que o laço se repete.
+						   Devemos usar "{ }" para determinar onde o while começa e termina. */
 	
 	printf("\nDigite um número para inserir no vetor: ");
 	
@@ -90,15 +99,55 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	system("pause"); // Pausando o programa para ver o que fizemos.
 	
-	return 0; // Fazemos isso para evitar bugs.
+	return 0; // Fazemos isso para evitar bugs, retorno padrão do main.
 }
 
-
+  // Anotações extras:
+  
+// /* Utilizano duas barras (//) fazemos um comentário, não altera o código, apenas anota algo que o programador julga útil para fazer a manutenção do código.
+// Também podemos fazer /* */ 
+// Isso faz com que tudo que esteja dentro, seja comentado. O comentário é útil para testar o código sem ter que apagar algo. Ao invés de apagar algo para arrumar, apenas deixe a parte comentada.
 
 /*
+
+ Operadores:
+
+
+	+  = Soma
+	-  = Subtação
+	*  = Multiplicação
+	/  = Divisão
+	|| = OR
+	&& = AND
+	!  = NOT
+	== = Comparação
+	!= = Diferente
+	=  = Atribuição
+	> = Maior
+	< = Menor
+	<=, >= = Menor/Maior ou igual
+ 
+	Para facilitar a vida, podemos ao invés de fazer a = a + b ao fazer uma operação, podemos fazer a += b, ou a -= b, e por ai vai. O resultado é o mesmo.
+
+/*
+
+Uso de variaveis:
+
+Devemos lembrar que em computação, sempre estamos de uma maneira ou de outra trabalhando com binários. 
+Então, 8 bits em binário equivalem a 1 byte. Logo, em 1 byte podemos representar um número em binário até 8 bits, (255, lembrando que sempre começamos em 0).
+
+char (character) = Guarda 1 caractere, pesa 1 byte.
+int (integer) = Números inteiros, pode guardar números de até 4 bytes.
+float (floating) = Números em ponto flutuante, para representar reais. Tem 4 bytes. Fazer contas com números float com vírgula gera imprecisão pois os números são calculados em binário, e isso gera dízimas.
+double = Números reais também, porém com o dobro de alcance do float. Tem 8 bytes. Ainda tem problemas para calcular números com virgula. (Esses problemas só são notáveis em apps que precisam de 100% de previsão, como bancos manipulando dinheiro)
+string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determina.
+
+
 %d = inteiro
 %c = caractere
 %f = float
+%lf = double
 %s = string
+
 */
 
