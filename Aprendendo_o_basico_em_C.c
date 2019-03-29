@@ -288,7 +288,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
   // Anotações extras:
   
-// /* Utilizano duas barras (//) fazemos um comentário, não altera o código, apenas anota algo que o programador julga útil para fazer a manutenção do código.
+//  Utilizano duas barras (//) fazemos um comentário, não altera o código, apenas anota algo que o programador julga útil para fazer a manutenção do código.
 // Também podemos fazer /* */ 
 // Isso faz com que tudo que esteja dentro, seja comentado. O comentário é útil para testar o código sem ter que apagar algo. Ao invés de apagar algo para arrumar, apenas deixe a parte comentada.
 
@@ -339,11 +339,6 @@ string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determi
 %f = float
 %lf = double
 %s = string
-
-*/
-
-
-/* 
 
 
 
