@@ -1,5 +1,6 @@
 
 // Feito por Guilherme Leão - ADS 3º semestre para ajudar os iniciantes.
+// Qualquer dúvida entre em contato. links de contato em: http://somnus.dev
 // Anotações básicas e úteis no fim do programa.
 
 /*
@@ -82,7 +83,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	scanf("%d",&usandoIf);
 	
-	if(usandoIf % 2 == 0){ // No caso estamos fazendo uma condição. If (se) a variavel ter o resto 0 dividindo por 2 (usando o % para obter o resto), ele escreve na tela que o número é par. 
+	if(usandoIf % 2 == 0){ // No caso estamos fazendo uma condição. If (se) a variavel tiver o resto 0 dividindo por 2 (usando o % para obter o resto), ele escreve na tela que o número é par. 
 		
 		printf("\nO número é par!\n");
 		
@@ -191,7 +192,8 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
 	// Trabalhando com Strings
 	
-	char cadeia[20]; // Criando um vetor de caracteres para poder trabalhar com String, ou cadeia de caracteres, usado por exemplo para digitar um nome.
+	
+	char cadeia[20]; // Criando um vetor de caracteres para poder trabalhar com String, ou cadeia de caracteres, usado por exemplo para digitar um nome. Isso é feito pois string não é um tipo primitivo, e não existe em C.
 	
 	printf("\nDigite um nome bem bonito: ");
 	
@@ -226,7 +228,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 			
 			if(auxiliar == 'x' || auxiliar == 'X'){   	//Fazemos aqui um if, que toda vez que algo é digitado, verifica se o que o usuario escreveu é X ou x (usamos o OR por causa do case sensitive).
 														//Se o que estiver na variável for X, o loop quebra e passa para a próxima instrução, senão o loop continua escrevendo.	
-				printf("\n Você saiu do loop!");        //Essa é a melhor maneira de fazer um programa para cadastrar pessoas seguidas em algo por exemplo.
+				printf("\n Você saiu do loop!");        //Essa é a melhor maneira de fazer um programa para cadastrar varias pessoas em seguida por exemplo.
 				break;
 			}
 			
@@ -269,7 +271,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
 	}
 	
-	puts("\n"); // A função puts significa "put string", que nada mais é que printa algo na tela, porém não recebe variaveis como o printf, apenas strings. Como vamos apenas pular linhas, é mais rápido escrever puts que printf.
+	puts("\n"); // A função puts significa "put string", que nada mais é que printar algo na tela, porém não recebe variaveis como o printf, apenas strings. Como vamos apenas pular linhas, é mais rápido escrever puts que printf (lembrando que a função já pula 1 linha por si só).
 	
 	
 	printf("Este foi seu primeiro programa!\n\n");
@@ -327,10 +329,10 @@ Ao declarar uma variavel, você armazena um espaço na memória para ela. Falaremos
 Devemos lembrar que em computação, sempre estamos de uma maneira ou de outra trabalhando com binários. 
 Então, 8 bits em binário equivalem a 1 byte. Logo, em 1 byte podemos representar um número em binário até 8 bits, (255, lembrando que sempre começamos em 0).
 
-char (character) = Guarda 1 caractere, pesa 1 byte.
+char (character) = Guarda 1 caractere, num alcance de 256(8 bits), pesa 1 byte.
 int (integer) = Números inteiros, pode guardar números de até 4 bytes.
 float (floating) = Números em ponto flutuante, para representar reais. Tem 4 bytes. Fazer contas com números float com vírgula gera imprecisão pois os números são calculados em binário, e isso gera dízimas.
-double = Números reais também, porém com o dobro de alcance do float. Tem 8 bytes. Ainda tem problemas para calcular números com virgula. (Esses problemas só são notáveis em apps que precisam de 100% de previsão, como bancos manipulando dinheiro)
+double = Números reais também, porém com o dobro de alcance do float. Tem 8 bytes. Ainda tem problemas para calcular números com virgula. (Esses problemas só são notáveis em apps que precisam de 100% de precisão, como bancos manipulando dinheiro)
 string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determina.
 
 
@@ -346,7 +348,7 @@ string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determi
  
  
  
-  							NUNCA, EU DISSE NUNCA, use goto na sua vida. Vai ferrar tudo e quebrar e você vai odiar a existência e vai xigar eu vizinho.
+  							NUNCA, EU DISSE NUNCA, use goto na sua vida. Vai ferrar tudo e quebrar e você vai odiar a existência e vai xigar seu vizinho.
  
  
  
