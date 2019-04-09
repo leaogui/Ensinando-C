@@ -279,7 +279,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	system("pause"); // Pausando o programa para ver o que fizemos.
 	
-	return 0; // Fazemos isso para evitar bugs, retorno padrão do main.
+	return 0; // Fazemos isso para evitar bugs, retorno padrão do main (A função não irá retornar nada).
 }
 
 
