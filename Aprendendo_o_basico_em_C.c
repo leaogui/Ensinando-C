@@ -18,7 +18,10 @@ Ordem:
 - Utilizando o laço do while e o laço for
 - Sub-Rotinas: Procedimentos
 - Sub-Rotinas: Funções
-
+- WIP : variáveis globais/locais
+- WIP : Passagem por referência
+- WIP : Ponteiros
+- WIP : Structs
 
 */
 
@@ -35,8 +38,25 @@ Ordem:
 
 
 
-//Começando o programa
 
+int dobroNum(int valor){ // A função será feita toda acima do main, e não irá precisar de declaração. Dentro dos parenteses precisamos colocar uma variável para receber o que passamos por parâmetro.
+						 // Começamos com int, pois retornaremos um valor inteiro. 
+						 // Dentro de "valor", temos o mesmo número que mandamos da variável func, 5.
+						 
+	valor = valor * 2;						 
+	
+	return valor; // Aqui colocamos o retorno da função, estamos retornando uma variável local da função.
+}
+
+
+void printMsg(); // O natural seria digitar a função acima do main, mas como é mais "fácil" diigtar embaixo, podemos declarar a função antes do main e ela irá funcionar. IMPORTANTE: em compiladores mais novos o programa irá funcionar sem a declaração, mas no Dev 4.9 por exemplo, daria ruim.
+
+
+
+ //Começando o programa
+ 
+ 
+ 
 int main(void){ // Chamando a função principal, onde o programa começa. Usamos o "int" e o "void" para evitar problemas ocasionais, porém funciona apenas main(). Devemos abrir e fechar a função com { no começo e } no fim.
 	
 	setlocale(LC_ALL, "portuguese"); //Setando o idioma do arquivo como português, se não, acentos e caracteres da nossa linguagem irão bugar.
@@ -277,10 +297,32 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	//Sub-Rotinas: Procedimentos
 	
+	printMsg(); // Um procedimento, é uma "função sem retorno". Utilizamos para fazer algo no programa que não precise de retorno, como printar uma mensagem. 
+	            // Do mesmo jeito que usamos uma função da linguagem, usamos o nome da função e os "()". O procedimento está embaixo do main.
+	
+	system("pause");
+
+	system("cls");
+	
 	//Sub-Rotinas: Funções
 	
-	puts("\n"); // A função puts significa "put string", que nada mais é que printar algo na tela, porém não recebe variaveis como o printf, apenas strings. Como vamos apenas pular linhas, é mais rápido escrever puts que printf (lembrando que a função já pula 1 linha por si só).
+	int func = 5; // Vamos fazer uma função com retorno do dobro do número, então declaramos "func" como um número qualquer.
 	
+	int funcRes;  // Declaramos um int para receber o retorno da função.
+	
+	funcRes = dobroNum(func); // Para passar um valor pra função, colocamos o valor dentro dos parenteses. Com isso, estamos passando um parâmetro para a função. Estamos usando passagem por valor.
+							  // A passagem por valor faz uma cópia do que existe dentro da variável em um novo espaço de memória. Veremos apenas esse meio por enquanto.
+							  // Desta vez, a função foi feita toda antes do main, veja lá em cima.
+	
+	printf("O dobro do número é: %d\n",funcRes); // Verificando se tudo funcionou.
+		
+	system("pause");
+	
+	system("cls");
+	
+		
+	puts("\n"); // A função puts significa "put string", que nada mais é que printar algo na tela, porém não recebe variaveis como o printf, apenas strings. 
+	            // Como vamos apenas pular linhas, é mais rápido escrever puts que printf (lembrando que a função já pula 1 linha por si só).
 	
 	printf("Este foi seu primeiro programa!\n\n");
 	
@@ -291,7 +333,14 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 }
 
 
-
+void printMsg(){ // Para fazermos a função, devemos primeiramente escrever o tipo de retorno. Como um procedimento é uma função sem retorno, escrevemos void (nada). Lembrando que a função está declarada antes do main. Leia as anotações da declaração lá em cima.
+	
+	
+	printf("O Guigui é legal\n");		// Digitamos o código a ser executado aqui.		
+	
+	
+	
+}
 
 
 
