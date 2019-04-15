@@ -1,6 +1,6 @@
 
-// Feito por Guilherme Leão - ADS 3º semestre para ajudar os iniciantes.
-// Qualquer dúvida entre em contato. links de contato em: http://somnus.dev
+// Feito por Guilherme Leão - IFSP - ADS, para ajudar os iniciantes.
+// Qualquer dúvida entre em contato. links de contato em: https://somnus.dev
 // Anotações básicas e úteis no fim do programa.
 
 
@@ -21,10 +21,11 @@ Ordem:
 - Utilizando o laço do while e o laço for
 - Sub-Rotinas: Procedimentos
 - Sub-Rotinas: Funções
-- WIP : variáveis globais/locais
-- WIP : Passagem por referência
+- Variáveis globais/locais
+- Passagem por referência
 - WIP : Ponteiros
 - WIP : Structs
+- WIP : Extras (sleep, define...)
 
 */
 
@@ -37,7 +38,28 @@ Ordem:
 #include<locale.h>  // Biblioteca para alterar idiomas.
 
 
+
+
+
+
+
 int global; // declarando variável global
+
+
+
+
+
+
+
+void testeRef(float *testeRef){ // Nesse caso, para receber um endereço pelo parâmetro, precisaremos colocar um "*" em frente da variável, pois estaremos fazendo um ponteiro para receber o endereço. Ponteiros são variáveis que apontam para endereços de memória. Vamos aprender logo sobre ponteiros.
+	
+	*testeRef = *testeRef / 2;
+	
+}
+
+
+
+
 
 
 void mostrarGlobal(){
@@ -45,6 +67,9 @@ void mostrarGlobal(){
 	printf("\nO valor da variável global na função é: %d\n\n", global);   // mostrando o valor da variável global na função.
 		
 }
+
+
+
 
 
 
@@ -59,12 +84,27 @@ int dobroNum(int valor){ // A função será feita toda acima do main, e não irá pr
 }
 
 
+
+
+
+
 void printMsg(); // O natural seria digitar a função acima do main, mas como é mais "fácil" diigtar embaixo, podemos declarar a função antes do main e ela irá funcionar. IMPORTANTE: em compiladores mais novos o programa irá funcionar sem a declaração, mas no Dev 4.9 por exemplo, daria ruim.
 
 
 
 
-// --------COMECE POR AQUI!!!!!!----------------------------------------------------------------------------------------------------------
+
+
+
+/*
+
+ -------------------------------COMECE POR AQUI!!!!!!----------------------------------------------------------------------------------------------------------
+
+*/
+
+
+
+
 
 
 
@@ -80,7 +120,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	
 	
-	//Fazendo apenas apresentação do printf e scanf
+	//Apresentação do printf e scanf
 	
 	int inteiro =0; //Declarando uma variavel do tipo int (inteiro) e inicializando ela, útil para evitar bugs em alguns programas menores como esse, em programs maiores talvez não seja tão vantajoso.
 	
@@ -90,7 +130,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	printf("Digite um número para ser feliz: "); // Printando para o usuario escrever algo.
 	
-	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotações no fim do programa). Lembrando que se digitarmos um caractere, o programa irá bugar totalmente.
+	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotações no fim do programa). Lembrando que se digitarmos um caractere, o programa irá bugar totalmente. Burle isso usando um "if", aprenderemos logo.
 						  // Lembrando que em um scanf nunca podemos esquecer o "&", pois isso significa que o que estamos digitando, está indo para o endereço de memória da váriavel escrita depois dele. 1 "&" = endereçamento.
 	
 	printf("\nDigite uma letra para ser feliz em dobro: ");
@@ -383,7 +423,30 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	
 	
+	
+	// Passagem por referência
+	
+	
+	float ref;  // Instanciamos um real para saber a metade.
+	
+	printf("Digite um número para saber sua metade: ");
+	
+	scanf("%f",&ref);
 		
+	testeRef(&ref); // Estamos chamando a função (que está no topo do programa) com um "&" na frente do nome da variável, pois dessa vez, passamos o endereço da variável.
+					// Fazendo isso, não é feita uma cópia do valor, mas é referênciado o endereço, e tudo que for mudado lá em qualquer função, afetará a mesma variável. Um modo mais eficiente de "globalizar" uma variável.					
+	
+	printf("\nA metade é: %.2f\n\n", ref); // Ao mostrar um float ou um double, podemos colocar quantas casas decimais queremos que o programa mostre. Para usar isso, usamos um numero "." outro, sendo o primeiro para a parte inteira e o segundo para partes decimais. .2f significa que serão mostradas apenas 2 casas decimais.
+	
+	system("pause");
+	
+	system("cls");
+
+
+
+
+	
+			
 	puts("\n"); // A função puts significa "put string", que nada mais é que printar algo na tela, porém não recebe variaveis como o printf, apenas strings. 
 	            // Como vamos apenas pular linhas, é mais rápido escrever puts que printf (lembrando que a função já pula 1 linha por si só).
 	
@@ -434,6 +497,9 @@ void printMsg(){ // Para fazermos a função, devemos primeiramente escrever o tip
 	> = Maior
 	< = Menor
 	<=, >= = Menor/Maior ou igual
+	& = Endereço
+	* (antes do nome de variável) = ponteiro
+	Para aparecer um "%" no printf, use dois "%%"
  
 	Para facilitar a vida, podemos ao invés de fazer a = a + b ao fazer uma operação, podemos fazer a += b, ou a -= b, e por ai vai. O resultado é o mesmo.
 
@@ -453,11 +519,13 @@ double = Números reais também, porém com o dobro de alcance do float. Tem 8 byte
 string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determina.
 
 
-%d = inteiro
-%c = caractere
+%d / %i = inteiro
+%c = caractere (podemos também colocar um valor para imprimir o equivalente a ele na tabela ASCII)
 %f = float
-%lf = double
+%lf = double (long float)
 %s = string
+%p = endereço de memória em hexadecimal (pointer)
+
 
 
 
@@ -467,6 +535,9 @@ string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determi
  
   							NUNCA, EU DISSE NUNCA, use goto na sua vida. Vai ferrar tudo e quebrar e você vai odiar a existência e vai xigar seu vizinho.
  
+ 
+ 
+ Fazer tudo isso escutando essa playlist: https://open.spotify.com/user/12166805913/playlist/3jIgrTbMtylVqtrKjhOaui?si=Fx0XhhLAToOSlWsD757asQ É MUITO BOM!!!!
  
  
  */
