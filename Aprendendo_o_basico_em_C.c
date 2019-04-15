@@ -16,6 +16,8 @@ Ordem:
 - Trabalhado com String 1
 - Quebrando um laço com break
 - Utilizando o laço do while e o laço for
+- Sub-Rotinas: Procedimentos
+- Sub-Rotinas: Funções
 
 
 */
@@ -270,6 +272,12 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	printf("\nVetor posição %d: %d", contador+1,vetorDW[contador]);
 
 	}
+	
+	system("cls");
+	
+	//Sub-Rotinas: Procedimentos
+	
+	//Sub-Rotinas: Funções
 	
 	puts("\n"); // A função puts significa "put string", que nada mais é que printar algo na tela, porém não recebe variaveis como o printf, apenas strings. Como vamos apenas pular linhas, é mais rápido escrever puts que printf (lembrando que a função já pula 1 linha por si só).
 	
