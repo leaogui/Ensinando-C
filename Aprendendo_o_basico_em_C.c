@@ -1,6 +1,6 @@
 
 // Feito por Guilherme Leão - IFSP - ADS, para ajudar os iniciantes.
-// Qualquer dúvida entre em contato. links de contato em: https://somnus.dev
+// Qualquer dúvida entre em contato. Contato por Instagram: @guivstheworld
 // Anotações básicas e úteis no fim do programa.
 
 
