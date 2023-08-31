@@ -1,28 +1,28 @@
 
-// Feito por Guilherme Leão - IFSP - ADS, para ajudar os iniciantes.
-// Qualquer dúvida entre em contato. Contato por Instagram: @guivstheworld
-// Anotações básicas e úteis no fim do programa.
+// Feito por Guilherme LeÃ£o - IFSP - ADS, para ajudar os iniciantes.
+// Qualquer dÃºvida entre em contato. Contato por Instagram: @_leaog
+// AnotaÃ§Ãµes bÃ¡sicas e Ãºteis no fim do programa.
 
 
 /*
 
 Ordem:
 
- (Comece o programa pela linha pontilhada após ver sobre as bibliotecas)
+ (Comece o programa pela linha pontilhada apÃ³s ver sobre as bibliotecas)
 
 - Usando bibliotecas
-- Começando o programa
-- Apresentação printf/scanf
+- ComeÃ§ando o programa
+- ApresentaÃ§Ã£o printf/scanf
 - Condicionais : if/else
 - Condicionais : switch/case
-- Trabalhando com vetores e laço de repetição while
+- Trabalhando com vetores e laÃ§o de repetiÃ§Ã£o while
 - Trabalhado com String 1
-- Quebrando um laço com break
-- Utilizando o laço do while e o laço for
+- Quebrando um laÃ§o com break
+- Utilizando o laÃ§o do while e o laÃ§o for
 - Sub-Rotinas: Procedimentos
-- Sub-Rotinas: Funções
-- Variáveis globais/locais
-- Passagem por referência
+- Sub-Rotinas: FunÃ§Ãµes
+- VariÃ¡veis globais/locais
+- Passagem por referÃªncia
 - WIP : Ponteiros
 - WIP : Structs
 - WIP : Extras (sleep, define...)
@@ -31,10 +31,10 @@ Ordem:
 
 // Usando bibliotecas
 
-// Precisamos das bibliotecas para usar funções "pré feitas" da linguagem, sem elas o programa não funcionará. Podemos fazer nossas bibliotecas, entraremos nisso depois.
+// Precisamos das bibliotecas para usar funÃ§Ãµes "prÃ© feitas" da linguagem, sem elas o programa nÃ£o funcionarÃ¡. Podemos fazer nossas bibliotecas, entraremos nisso depois.
 
-#include<stdio.h>  // Biblioteca para funções basicas (printf, scanf).
-#include<stdlib.h>  // Biblioteca com outras funções, system("pause"), system("cls").
+#include<stdio.h>  // Biblioteca para funÃ§Ãµes basicas (printf, scanf).
+#include<stdlib.h>  // Biblioteca com outras funÃ§Ãµes, system("pause"), system("cls").
 #include<locale.h>  // Biblioteca para alterar idiomas.
 
 
@@ -43,7 +43,7 @@ Ordem:
 
 
 
-int global; // declarando variável global
+int global; // declarando variÃ¡vel global
 
 
 
@@ -51,7 +51,7 @@ int global; // declarando variável global
 
 
 
-void testeRef(float *testeRef){ // Nesse caso, para receber um endereço pelo parâmetro, precisaremos colocar um "*" em frente da variável, pois estaremos fazendo um ponteiro para receber o endereço. Ponteiros são variáveis que apontam para endereços de memória. Vamos aprender logo sobre ponteiros.
+void testeRef(float *testeRef){ // Nesse caso, para receber um endereÃ§o pelo parÃ¢metro, precisaremos colocar um "*" em frente da variÃ¡vel, pois estaremos fazendo um ponteiro para receber o endereÃ§o. Ponteiros sÃ£o variÃ¡veis que apontam para endereÃ§os de memÃ³ria. Vamos aprender logo sobre ponteiros.
 	
 	*testeRef = *testeRef / 2;
 	
@@ -64,7 +64,7 @@ void testeRef(float *testeRef){ // Nesse caso, para receber um endereço pelo par
 
 void mostrarGlobal(){
 		
-	printf("\nO valor da variável global na função é: %d\n\n", global);   // mostrando o valor da variável global na função.
+	printf("\nO valor da variÃ¡vel global na funÃ§Ã£o Ã©: %d\n\n", global);   // mostrando o valor da variÃ¡vel global na funÃ§Ã£o.
 		
 }
 
@@ -74,13 +74,13 @@ void mostrarGlobal(){
 
 
 
-int dobroNum(int valor){ // A função será feita toda acima do main, e não irá precisar de declaração. Dentro dos parenteses precisamos colocar uma variável para receber o que passamos por parâmetro.
-						 // Começamos com int, pois retornaremos um valor inteiro. 
-						 // Dentro de "valor", temos o mesmo número que mandamos da variável func, 5.
+int dobroNum(int valor){ // A funÃ§Ã£o serÃ¡ feita toda acima do main, e nÃ£o irÃ¡ precisar de declaraÃ§Ã£o. Dentro dos parenteses precisamos colocar uma variÃ¡vel para receber o que passamos por parÃ¢metro.
+						 // ComeÃ§amos com int, pois retornaremos um valor inteiro. 
+						 // Dentro de "valor", temos o mesmo nÃºmero que mandamos da variÃ¡vel func, 5.
 						 
 	valor = valor * 2;						 
 	
-	return valor; // Aqui colocamos o retorno da função, estamos retornando uma variável local da função.
+	return valor; // Aqui colocamos o retorno da funÃ§Ã£o, estamos retornando uma variÃ¡vel local da funÃ§Ã£o.
 }
 
 
@@ -88,7 +88,7 @@ int dobroNum(int valor){ // A função será feita toda acima do main, e não irá pr
 
 
 
-void printMsg(); // O natural seria digitar a função acima do main, mas como é mais "fácil" diigtar embaixo, podemos declarar a função antes do main e ela irá funcionar. IMPORTANTE: em compiladores mais novos o programa irá funcionar sem a declaração, mas no Dev 4.9 por exemplo, daria ruim.
+void printMsg(); // O natural seria digitar a funÃ§Ã£o acima do main, mas como Ã© mais "fÃ¡cil" diigtar embaixo, podemos declarar a funÃ§Ã£o antes do main e ela irÃ¡ funcionar. IMPORTANTE: em compiladores mais novos o programa irÃ¡ funcionar sem a declaraÃ§Ã£o, mas no Dev 4.9 por exemplo, daria ruim.
 
 
 
@@ -108,30 +108,30 @@ void printMsg(); // O natural seria digitar a função acima do main, mas como é m
 
 
 
- //Começando o programa
+ //ComeÃ§ando o programa
  
  
-int main(void){ // Chamando a função principal, onde o programa começa. Usamos o "int" e o "void" para evitar problemas ocasionais, porém funciona apenas main(). Devemos abrir e fechar a função com { no começo e } no fim.
+int main(void){ // Chamando a funÃ§Ã£o principal, onde o programa comeÃ§a. Usamos o "int" e o "void" para evitar problemas ocasionais, porÃ©m funciona apenas main(). Devemos abrir e fechar a funÃ§Ã£o com { no comeÃ§o e } no fim.
 	
-	setlocale(LC_ALL, "portuguese"); //Setando o idioma do arquivo como português, se não, acentos e caracteres da nossa linguagem irão bugar.
-	
-	
+	setlocale(LC_ALL, "portuguese"); //Setando o idioma do arquivo como portuguÃªs, se nÃ£o, acentos e caracteres da nossa linguagem irÃ£o bugar.
 	
 	
 	
 	
-	//Apresentação do printf e scanf
 	
-	int inteiro =0; //Declarando uma variavel do tipo int (inteiro) e inicializando ela, útil para evitar bugs em alguns programas menores como esse, em programs maiores talvez não seja tão vantajoso.
+	
+	//ApresentaÃ§Ã£o do printf e scanf
+	
+	int inteiro =0; //Declarando uma variavel do tipo int (inteiro) e inicializando ela, Ãºtil para evitar bugs em alguns programas menores como esse, em programs maiores talvez nÃ£o seja tÃ£o vantajoso.
 	
 	char caractere; //Declarando uma variavel do tipo char.
 	
-	printf("O C é bonito\n\n"); // Printando algo na tela, o \n pula uma linha, para deixar tudo mais fácil de ler..
+	printf("O C Ã© bonito\n\n"); // Printando algo na tela, o \n pula uma linha, para deixar tudo mais fÃ¡cil de ler..
 	
-	printf("Digite um número para ser feliz: "); // Printando para o usuario escrever algo.
+	printf("Digite um nÃºmero para ser feliz: "); // Printando para o usuario escrever algo.
 	
-	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotações no fim do programa). Lembrando que se digitarmos um caractere, o programa irá bugar totalmente. Burle isso usando um "if", aprenderemos logo.
-						  // Lembrando que em um scanf nunca podemos esquecer o "&", pois isso significa que o que estamos digitando, está indo para o endereço de memória da váriavel escrita depois dele. 1 "&" = endereçamento.
+	scanf("%d",&inteiro); // Scaneando algo que o usuario escreveu, do tipo int pelo %d (Falamos sobre os tipos de variavel nas anotaÃ§Ãµes no fim do programa). Lembrando que se digitarmos um caractere, o programa irÃ¡ bugar totalmente. Burle isso usando um "if", aprenderemos logo.
+						  // Lembrando que em um scanf nunca podemos esquecer o "&", pois isso significa que o que estamos digitando, estÃ¡ indo para o endereÃ§o de memÃ³ria da vÃ¡riavel escrita depois dele. 1 "&" = endereÃ§amento.
 	
 	printf("\nDigite uma letra para ser feliz em dobro: ");
 	
@@ -141,7 +141,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	printf("\nEscrevi em inteiro: %d.\nEscrevi em caractere: %c.\n\n",inteiro,caractere); //Escrevendo na tela o valor das variaveis int e char, deve colocar o nome das variaveis fora das aspas.
 	
-	system("pause"); // Pausa o programa até algum botão ser apertado.
+	system("pause"); // Pausa o programa atÃ© algum botÃ£o ser apertado.
 	
 	
 	
@@ -151,24 +151,24 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	// Usando if e else
 	
-	system("cls"); // Função para limpar a tela do programa para melhor visualização.
+	system("cls"); // FunÃ§Ã£o para limpar a tela do programa para melhor visualizaÃ§Ã£o.
 	
 	int usandoIf;
 	
-	printf("Digite um número e veja se é par: "); 
+	printf("Digite um nÃºmero e veja se Ã© par: "); 
 	
 	scanf("%d",&usandoIf);
 	
-	if(usandoIf % 2 == 0){ // No caso estamos fazendo uma condição. If (se) a variavel tiver o resto 0 dividindo por 2 (usando o % para obter o resto), ele escreve na tela que o número é par. 
+	if(usandoIf % 2 == 0){ // No caso estamos fazendo uma condiÃ§Ã£o. If (se) a variavel tiver o resto 0 dividindo por 2 (usando o % para obter o resto), ele escreve na tela que o nÃºmero Ã© par. 
 		
-		printf("\nO número é par!\n");
+		printf("\nO nÃºmero Ã© par!\n");
 		
 	}
-	else{ // Else(senão), escreve na tela que o número é ímpar.  
+	else{ // Else(senÃ£o), escreve na tela que o nÃºmero Ã© Ã­mpar.  
 		
-		printf("\nO número é ímpar!\n");
+		printf("\nO nÃºmero Ã© Ã­mpar!\n");
 		
-	}	// Lembrando que podemos usar ifs e elses encadeados, um dentro do outro. E também, nunca pode existir um else sem um if.
+	}	// Lembrando que podemos usar ifs e elses encadeados, um dentro do outro. E tambÃ©m, nunca pode existir um else sem um if.
 		
 
 
@@ -186,26 +186,26 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	scanf("%c",&usandoSC);
 	
-	switch(usandoSC){ // Para utilizar o switch, chamamos a função "switch(){ }" e vamos usar o nome da variavel nos parenteses (parâmetro). 
+	switch(usandoSC){ // Para utilizar o switch, chamamos a funÃ§Ã£o "switch(){ }" e vamos usar o nome da variavel nos parenteses (parÃ¢metro). 
 		
-	case 'm':										// caso o usuário tenha digitado m (ou masculino, já que char só vai pegar a primeira letra):
-		printf("\nSeu sexo é masculino\n\n");  		// Escreve que o sexo é masculino
-		break;										// break quebra o switch e passa para a próxima instrução
+	case 'm':										// caso o usuÃ¡rio tenha digitado m (ou masculino, jÃ¡ que char sÃ³ vai pegar a primeira letra):
+		printf("\nSeu sexo Ã© masculino\n\n");  		// Escreve que o sexo Ã© masculino
+		break;										// break quebra o switch e passa para a prÃ³xima instruÃ§Ã£o
 		
-	case 'M':										// Mesma coisa do de cima, mas como a linguagem é case sensitive, temos que fazer maiusculo, vamos aprender como burlar isso depois.
-		printf("\nSeu sexo é masculino\n\n");
+	case 'M':										// Mesma coisa do de cima, mas como a linguagem Ã© case sensitive, temos que fazer maiusculo, vamos aprender como burlar isso depois.
+		printf("\nSeu sexo Ã© masculino\n\n");
 		break;
 		
 	case 'f':
-		printf("\nSeu sexo é feminino\n\n");
+		printf("\nSeu sexo Ã© feminino\n\n");
 		break;
 		
 	case 'F':
-		printf("\nSeu sexo é feminino\n\n");
+		printf("\nSeu sexo Ã© feminino\n\n");
 		break;
 		
-	default:																	//default é acionado caso nenhuma das condições serem resolvidas. É o "else" do switch.
-		printf("\nO programa só funciona com sexo masculino e feminino\n\n");	
+	default:																	//default Ã© acionado caso nenhuma das condiÃ§Ãµes serem resolvidas. Ã‰ o "else" do switch.
+		printf("\nO programa sÃ³ funciona com sexo masculino e feminino\n\n");	
 			
 		
 	}
@@ -220,24 +220,24 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 
 
-	//Trabalhando com vetores e laço while
+	//Trabalhando com vetores e laÃ§o while
 	
-	int vetor[5] = {0,0,0,0,0} ; //Criando um vetor (variável com várias posições), de 5 posições (0-4) e inicializando ele.
+	int vetor[5] = {0,0,0,0,0} ; //Criando um vetor (variÃ¡vel com vÃ¡rias posiÃ§Ãµes), de 5 posiÃ§Ãµes (0-4) e inicializando ele.
 	
 	int contador = 0; //Criando um contador para auxiliar no while.
 		
 	
-	while(contador < 5){ /*Laço de repetição while, irá repetir o que está dentro até a sua condição ser resolvida. No caso, enquanto contador for menor que 5, continua fazendo.
-						   Usamos menor que 5 pois o vetor com 5 posições começa do 0 e vai até o 4. Estamos adicionando 1 no contador sempre que o laço se repete.
-						   Devemos usar "{ }" para determinar onde o while começa e termina. */
+	while(contador < 5){ /*LaÃ§o de repetiÃ§Ã£o while, irÃ¡ repetir o que estÃ¡ dentro atÃ© a sua condiÃ§Ã£o ser resolvida. No caso, enquanto contador for menor que 5, continua fazendo.
+						   Usamos menor que 5 pois o vetor com 5 posiÃ§Ãµes comeÃ§a do 0 e vai atÃ© o 4. Estamos adicionando 1 no contador sempre que o laÃ§o se repete.
+						   Devemos usar "{ }" para determinar onde o while comeÃ§a e termina. */
 	
-	printf("\nDigite um número para inserir no vetor: ");
+	printf("\nDigite um nÃºmero para inserir no vetor: ");
 	
-	scanf("%d",&vetor[contador]); //Scaneando valores no vetor usando o contador para acessar suas posições. Enquanto contador estiver no 0, adiciona na posiçãõ 0.
+	scanf("%d",&vetor[contador]); //Scaneando valores no vetor usando o contador para acessar suas posiÃ§Ãµes. Enquanto contador estiver no 0, adiciona na posiÃ§Ã£Ãµ 0.
 	
-	printf("\nEscrevi em Vetor posição %d: %d\n",contador+1,vetor[contador]); // Printando na tela com auxilio do while e o contador, para não ter que repetir.
+	printf("\nEscrevi em Vetor posiÃ§Ã£o %d: %d\n",contador+1,vetor[contador]); // Printando na tela com auxilio do while e o contador, para nÃ£o ter que repetir.
 	
-	contador++; // Adicionando +1 no contador. Sempre que o while passar por aqui acontece contador = contador + 1. É muito importante lembrar que 1 "=" em linguagem c significa atribuição, 2 "==" significam comparação.
+	contador++; // Adicionando +1 no contador. Sempre que o while passar por aqui acontece contador = contador + 1. Ã‰ muito importante lembrar que 1 "=" em linguagem c significa atribuiÃ§Ã£o, 2 "==" significam comparaÃ§Ã£o.
 	
 	}
 	
@@ -247,7 +247,7 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	while(contador < 5){
 		
-		printf("\nVetor posição %d: %d", contador+1,vetor[contador]); // Este while serve apenas para confirmar se o que escrevemos estava certo.
+		printf("\nVetor posiÃ§Ã£o %d: %d", contador+1,vetor[contador]); // Este while serve apenas para confirmar se o que escrevemos estava certo.
 		
 		contador++;
 		
@@ -268,13 +268,13 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	// Trabalhando com Strings
 	
 	
-	char cadeia[20]; // Criando um vetor de caracteres para poder trabalhar com String, ou cadeia de caracteres, usado por exemplo para digitar um nome. Isso é feito pois string não é um tipo primitivo, e não existe em C.
+	char cadeia[20]; // Criando um vetor de caracteres para poder trabalhar com String, ou cadeia de caracteres, usado por exemplo para digitar um nome. Isso Ã© feito pois string nÃ£o Ã© um tipo primitivo, e nÃ£o existe em C.
 	
 	printf("\nDigite um nome bem bonito: ");
 	
-	fflush(stdin); // Como uma string são vários chars, precisamos do fflush.
+	fflush(stdin); // Como uma string sÃ£o vÃ¡rios chars, precisamos do fflush.
 
-	fgets(cadeia,20,stdin);	// Escaneando uma string, se usar scanf para fazer isso, ele não irá ler o espaço. 20 é o número de dígitos.
+	fgets(cadeia,20,stdin);	// Escaneando uma string, se usar scanf para fazer isso, ele nÃ£o irÃ¡ ler o espaÃ§o. 20 Ã© o nÃºmero de dÃ­gitos.
 	
 	printf("O nome digitado foi: %s\n\n", cadeia); //Printando a string que escreveu com %s.
 	
@@ -288,10 +288,10 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	
 	
-	//Quebrando um laço usando break
+	//Quebrando um laÃ§o usando break
 	
 	
-		while(2>1){										//Esse loop de while, tem uma condição que o deixa infinito, 2 sempre será maior que 1, ou seja, impossível de acabar.
+		while(2>1){										//Esse loop de while, tem uma condiÃ§Ã£o que o deixa infinito, 2 sempre serÃ¡ maior que 1, ou seja, impossÃ­vel de acabar.
 			
 			char auxiliar;
 			
@@ -301,13 +301,13 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 			
 			scanf("%c",&auxiliar);
 			
-			if(auxiliar == 'x' || auxiliar == 'X'){   	//Fazemos aqui um if, que toda vez que algo é digitado, verifica se o que o usuario escreveu é X ou x (usamos o OR por causa do case sensitive).
-														//Se o que estiver na variável for X, o loop quebra e passa para a próxima instrução, senão o loop continua escrevendo.	
-				printf("\n Você saiu do loop!");        //Essa é a melhor maneira de fazer um programa para cadastrar varias pessoas em seguida por exemplo.
+			if(auxiliar == 'x' || auxiliar == 'X'){   	//Fazemos aqui um if, que toda vez que algo Ã© digitado, verifica se o que o usuario escreveu Ã© X ou x (usamos o OR por causa do case sensitive).
+														//Se o que estiver na variÃ¡vel for X, o loop quebra e passa para a prÃ³xima instruÃ§Ã£o, senÃ£o o loop continua escrevendo.	
+				printf("\n VocÃª saiu do loop!");        //Essa Ã© a melhor maneira de fazer um programa para cadastrar varias pessoas em seguida por exemplo.
 				break;
 			}
 			
-			printf("\nO Guigui é lindo\n");
+			printf("\nO Guigui Ã© lindo\n");
 			
 			
 		}
@@ -320,31 +320,31 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
 
 
-	// Utilizando o laço do while e o laço for
+	// Utilizando o laÃ§o do while e o laÃ§o for
 	
-	int vetorDW[5]; // Vetor para trabalhar com o laço.
+	int vetorDW[5]; // Vetor para trabalhar com o laÃ§o.
 	
 	contador = 0; // zeramos o contador novamente para auxiliar.
 	
 	
-	do{ // O laço do while funciona de maneira semelhante ao while, a difereça é: o laço while irá verificar se a condição é resolvida no começo do laço, o do while verifica se isso acontece no fim do laço.
+	do{ // O laÃ§o do while funciona de maneira semelhante ao while, a difereÃ§a Ã©: o laÃ§o while irÃ¡ verificar se a condiÃ§Ã£o Ã© resolvida no comeÃ§o do laÃ§o, o do while verifica se isso acontece no fim do laÃ§o.
 	
-	printf("\nDigite um número bem massa: ");
+	printf("\nDigite um nÃºmero bem massa: ");
 			
 	scanf("%d",&vetorDW[contador]);											
 	
 	contador++;
 		
-	}while(contador < 5); // Devemos colocar "do", abrir e fechar as chaves, e no fim colocar o "while" igual ao próprio laço while. Toda vez adicionamos +1 em contador, e quando chega em 5, o laço quebra e continua o programa (verificando no final). 
+	}while(contador < 5); // Devemos colocar "do", abrir e fechar as chaves, e no fim colocar o "while" igual ao prÃ³prio laÃ§o while. Toda vez adicionamos +1 em contador, e quando chega em 5, o laÃ§o quebra e continua o programa (verificando no final). 
 	
 	
 	
-	for(contador=0;contador<5;contador++){ // Para verificar se o laço do while funcionou, vamos usar o laço for para printar o vetor na tela.
-										   // Devemos estruturar o for de tal maneira: for("O número que você deseja que a variavel inicie (no caso queremos que comece no 0)";"A condição limite que você deseja (no caso, queremos que pare quando contador passar de 4)";"a condição para passar o número da condição(no caso queremos que adicione 1 ao contador toda vez que o loop aconteça)")
-										   // Outro exemplo: for(teste=30;teste=0;teste--){ "Conteudo dentro do laço" }, no caso o laço vai se repetir até "teste" descer de 30 para 0.
+	for(contador=0;contador<5;contador++){ // Para verificar se o laÃ§o do while funcionou, vamos usar o laÃ§o for para printar o vetor na tela.
+										   // Devemos estruturar o for de tal maneira: for("O nÃºmero que vocÃª deseja que a variavel inicie (no caso queremos que comece no 0)";"A condiÃ§Ã£o limite que vocÃª deseja (no caso, queremos que pare quando contador passar de 4)";"a condiÃ§Ã£o para passar o nÃºmero da condiÃ§Ã£o(no caso queremos que adicione 1 ao contador toda vez que o loop aconteÃ§a)")
+										   // Outro exemplo: for(teste=30;teste=0;teste--){ "Conteudo dentro do laÃ§o" }, no caso o laÃ§o vai se repetir atÃ© "teste" descer de 30 para 0.
 											
 									
-	printf("\nVetor posição %d: %d\n", contador+1,vetorDW[contador]);
+	printf("\nVetor posiÃ§Ã£o %d: %d\n", contador+1,vetorDW[contador]);
 
 	}
 	
@@ -360,8 +360,8 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 		
 	//Sub-Rotinas: Procedimentos
 	
-	printMsg(); // Um procedimento, é uma "função sem retorno". Utilizamos para fazer algo no programa que não precise de retorno, como printar uma mensagem. 
-	            // Do mesmo jeito que usamos uma função da linguagem, usamos o nome da função e os "()". O procedimento está embaixo do main.
+	printMsg(); // Um procedimento, Ã© uma "funÃ§Ã£o sem retorno". Utilizamos para fazer algo no programa que nÃ£o precise de retorno, como printar uma mensagem. 
+	            // Do mesmo jeito que usamos uma funÃ§Ã£o da linguagem, usamos o nome da funÃ§Ã£o e os "()". O procedimento estÃ¡ embaixo do main.
 	
 	system("pause");
 
@@ -373,22 +373,22 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	
 	
-	//Sub-Rotinas: Funções
+	//Sub-Rotinas: FunÃ§Ãµes
 	
-	int func; // Vamos fazer uma função com retorno do dobro do número, então declaramos "func" como inteiro.
+	int func; // Vamos fazer uma funÃ§Ã£o com retorno do dobro do nÃºmero, entÃ£o declaramos "func" como inteiro.
 	
-	int funcRes;  // Declaramos um int para receber o retorno da função.
+	int funcRes;  // Declaramos um int para receber o retorno da funÃ§Ã£o.
 	
-	printf("Digite um número para saber seu dobro: ");
+	printf("Digite um nÃºmero para saber seu dobro: ");
 	
 	scanf("%d",&func);
 	
-	funcRes = dobroNum(func); // Para passar um valor pra função, colocamos o valor dentro dos parenteses. Com isso, estamos passando um parâmetro para a função. Estamos usando passagem por valor.
-							  // A passagem por valor faz uma cópia do que existe dentro da variável em um novo espaço de memória. Veremos apenas esse meio por enquanto.
-							  // Desta vez, a função foi feita toda antes do main, veja lá em cima.
-							  // funcRes recebe o retorno da função dobroNum() com o parâmetro func.
+	funcRes = dobroNum(func); // Para passar um valor pra funÃ§Ã£o, colocamos o valor dentro dos parenteses. Com isso, estamos passando um parÃ¢metro para a funÃ§Ã£o. Estamos usando passagem por valor.
+							  // A passagem por valor faz uma cÃ³pia do que existe dentro da variÃ¡vel em um novo espaÃ§o de memÃ³ria. Veremos apenas esse meio por enquanto.
+							  // Desta vez, a funÃ§Ã£o foi feita toda antes do main, veja lÃ¡ em cima.
+							  // funcRes recebe o retorno da funÃ§Ã£o dobroNum() com o parÃ¢metro func.
 	
-	printf("\n\nO dobro do número é: %d\n\n",funcRes); // Verificando se tudo funcionou.
+	printf("\n\nO dobro do nÃºmero Ã©: %d\n\n",funcRes); // Verificando se tudo funcionou.
 		
 	system("pause");
 	
@@ -399,21 +399,21 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	
 	
-	// Variáveis globais / locais
+	// VariÃ¡veis globais / locais
 	
-	// Instaciamos uma variável int antes do "main", veja em cima.
-	// Ao fazer isso, instanciamos uma variável global. Variáveis globais são variáveis fora de qualquer função.
-	// Ao usar uma variável global, o valor dela serve para todo o programa, em todas as funções a variável é a mesma.
-	// Ao criar uma variável dentro de uma função, seja o main ou não, ela só existe dentro do escopo dessa função, por isso passamos variáveis por parâmetros.]
-	// Variáveis globais podem ser úteis de vez em quando, mas não são uma prática tão boa. Para utilizar isso de outra maneira melhor, iremos aprender um pouco sobe endereço de memória um pouco a frente.
+	// Instaciamos uma variÃ¡vel int antes do "main", veja em cima.
+	// Ao fazer isso, instanciamos uma variÃ¡vel global. VariÃ¡veis globais sÃ£o variÃ¡veis fora de qualquer funÃ§Ã£o.
+	// Ao usar uma variÃ¡vel global, o valor dela serve para todo o programa, em todas as funÃ§Ãµes a variÃ¡vel Ã© a mesma.
+	// Ao criar uma variÃ¡vel dentro de uma funÃ§Ã£o, seja o main ou nÃ£o, ela sÃ³ existe dentro do escopo dessa funÃ§Ã£o, por isso passamos variÃ¡veis por parÃ¢metros.]
+	// VariÃ¡veis globais podem ser Ãºteis de vez em quando, mas nÃ£o sÃ£o uma prÃ¡tica tÃ£o boa. Para utilizar isso de outra maneira melhor, iremos aprender um pouco sobe endereÃ§o de memÃ³ria um pouco a frente.
 	
-	printf("Digite um número para a variável global: ");
+	printf("Digite um nÃºmero para a variÃ¡vel global: ");
 	
-	scanf("%d", &global); // Gravamos um valor na variável global.
+	scanf("%d", &global); // Gravamos um valor na variÃ¡vel global.
 	
-	printf("\nO número na função principal é: %d\n", global);
+	printf("\nO nÃºmero na funÃ§Ã£o principal Ã©: %d\n", global);
 	
-	mostrarGlobal(); // vamos mostrar o valor na função a parte (está acima do main, apartir daqui, todas serão feitas assim).
+	mostrarGlobal(); // vamos mostrar o valor na funÃ§Ã£o a parte (estÃ¡ acima do main, apartir daqui, todas serÃ£o feitas assim).
 	
 	system("pause");
 	
@@ -424,19 +424,19 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 	
 	
 	
-	// Passagem por referência
+	// Passagem por referÃªncia
 	
 	
 	float ref;  // Instanciamos um real para saber a metade.
 	
-	printf("Digite um número para saber sua metade: ");
+	printf("Digite um nÃºmero para saber sua metade: ");
 	
 	scanf("%f",&ref);
 		
-	testeRef(&ref); // Estamos chamando a função (que está no topo do programa) com um "&" na frente do nome da variável, pois dessa vez, passamos o endereço da variável.
-					// Fazendo isso, não é feita uma cópia do valor, mas é referênciado o endereço, e tudo que for mudado lá em qualquer função, afetará a mesma variável. Um modo mais eficiente de "globalizar" uma variável.					
+	testeRef(&ref); // Estamos chamando a funÃ§Ã£o (que estÃ¡ no topo do programa) com um "&" na frente do nome da variÃ¡vel, pois dessa vez, passamos o endereÃ§o da variÃ¡vel.
+					// Fazendo isso, nÃ£o Ã© feita uma cÃ³pia do valor, mas Ã© referÃªnciado o endereÃ§o, e tudo que for mudado lÃ¡ em qualquer funÃ§Ã£o, afetarÃ¡ a mesma variÃ¡vel. Um modo mais eficiente de "globalizar" uma variÃ¡vel.					
 	
-	printf("\nA metade é: %.2f\n\n", ref); // Ao mostrar um float ou um double, podemos colocar quantas casas decimais queremos que o programa mostre. Para usar isso, usamos um numero "." outro, sendo o primeiro para a parte inteira e o segundo para partes decimais. .2f significa que serão mostradas apenas 2 casas decimais.
+	printf("\nA metade Ã©: %.2f\n\n", ref); // Ao mostrar um float ou um double, podemos colocar quantas casas decimais queremos que o programa mostre. Para usar isso, usamos um numero "." outro, sendo o primeiro para a parte inteira e o segundo para partes decimais. .2f significa que serÃ£o mostradas apenas 2 casas decimais.
 	
 	system("pause");
 	
@@ -447,84 +447,84 @@ int main(void){ // Chamando a função principal, onde o programa começa. Usamos o
 
 	
 			
-	puts("\n"); // A função puts significa "put string", que nada mais é que printar algo na tela, porém não recebe variaveis como o printf, apenas strings. 
-	            // Como vamos apenas pular linhas, é mais rápido escrever puts que printf (lembrando que a função já pula 1 linha por si só).
+	puts("\n"); // A funÃ§Ã£o puts significa "put string", que nada mais Ã© que printar algo na tela, porÃ©m nÃ£o recebe variaveis como o printf, apenas strings. 
+	            // Como vamos apenas pular linhas, Ã© mais rÃ¡pido escrever puts que printf (lembrando que a funÃ§Ã£o jÃ¡ pula 1 linha por si sÃ³).
 	
 	printf("Este foi seu primeiro programa!\n\n");
 	
 	
 	system("pause"); // Pausando o programa para ver o que fizemos.
 	
-	return 0; // Fazemos isso para evitar bugs, retorno padrão do main (A função não irá retornar nada).
+	return 0; // Fazemos isso para evitar bugs, retorno padrÃ£o do main (A funÃ§Ã£o nÃ£o irÃ¡ retornar nada).
 }
 
 
-void printMsg(){ // Para fazermos a função, devemos primeiramente escrever o tipo de retorno. Como um procedimento é uma função sem retorno, escrevemos void (nada). Lembrando que a função está declarada antes do main. Leia as anotações da declaração lá em cima.
+void printMsg(){ // Para fazermos a funÃ§Ã£o, devemos primeiramente escrever o tipo de retorno. Como um procedimento Ã© uma funÃ§Ã£o sem retorno, escrevemos void (nada). Lembrando que a funÃ§Ã£o estÃ¡ declarada antes do main. Leia as anotaÃ§Ãµes da declaraÃ§Ã£o lÃ¡ em cima.
 		
-	printf("O Guigui é legal\n");		// Digitamos o código a ser executado aqui.		
+	printf("O Guigui Ã© legal\n");		// Digitamos o cÃ³digo a ser executado aqui.		
 		
 }
 
 
 
 
-  // Anotações extras:
+  // AnotaÃ§Ãµes extras:
   
-//  Utilizano duas barras (//) fazemos um comentário, não altera o código, apenas anota algo que o programador julga útil para fazer a manutenção do código.
-// Também podemos fazer /* */ 
-// Isso faz com que tudo que esteja dentro, seja comentado. O comentário é útil para testar o código sem ter que apagar algo. Ao invés de apagar algo para arrumar, apenas deixe a parte comentada.
+//  Utilizano duas barras (//) fazemos um comentÃ¡rio, nÃ£o altera o cÃ³digo, apenas anota algo que o programador julga Ãºtil para fazer a manutenÃ§Ã£o do cÃ³digo.
+// TambÃ©m podemos fazer /* */ 
+// Isso faz com que tudo que esteja dentro, seja comentado. O comentÃ¡rio Ã© Ãºtil para testar o cÃ³digo sem ter que apagar algo. Ao invÃ©s de apagar algo para arrumar, apenas deixe a parte comentada.
 
 /*
 
-	A regra principal é: o usuário é burro. Devemos tentar prever todas as formas de quebrar o programa para arrumar antes, pois se elas existirem, vão acabar sendo usadas.
+	A regra principal Ã©: o usuÃ¡rio Ã© burro. Devemos tentar prever todas as formas de quebrar o programa para arrumar antes, pois se elas existirem, vÃ£o acabar sendo usadas.
 
-	Lembrando sempre que C é uma linguagem case sensitve, ou seja, diferencia maiúsculas de minúsculas. Tome cuidado ao escrever.
+	Lembrando sempre que C Ã© uma linguagem case sensitve, ou seja, diferencia maiÃºsculas de minÃºsculas. Tome cuidado ao escrever.
 
  Operadores:
 
 
 	+  = Soma
-	-  = Subtação
-	*  = Multiplicação
-	/  = Divisão
+	-  = SubtaÃ§Ã£o
+	*  = MultiplicaÃ§Ã£o
+	/  = DivisÃ£o
 	%  = Mod (resto)
 	|| = OR
 	&& = AND
 	!  = NOT
-	== = Comparação
+	== = ComparaÃ§Ã£o
 	!= = Diferente
-	=  = Atribuição
+	=  = AtribuiÃ§Ã£o
 	> = Maior
 	< = Menor
 	<=, >= = Menor/Maior ou igual
-	& = Endereço
-	* (antes do nome de variável) = ponteiro
+	& = EndereÃ§o
+	* (antes do nome de variÃ¡vel) = ponteiro
 	Para aparecer um "%" no printf, use dois "%%"
  
-	Para facilitar a vida, podemos ao invés de fazer a = a + b ao fazer uma operação, podemos fazer a += b, ou a -= b, e por ai vai. O resultado é o mesmo.
+	Para facilitar a vida, podemos ao invÃ©s de fazer a = a + b ao fazer uma operaÃ§Ã£o, podemos fazer a += b, ou a -= b, e por ai vai. O resultado Ã© o mesmo.
 
 
 
 Uso de variaveis:
 
-Ao declarar uma variavel, você armazena um espaço na memória para ela. Falaremos do tamanho de cada variavel abaixo.
+Ao declarar uma variavel, vocÃª armazena um espaÃ§o na memÃ³ria para ela. Falaremos do tamanho de cada variavel abaixo.
 
-Devemos lembrar que em computação, sempre estamos de uma maneira ou de outra trabalhando com binários. 
-Então, 8 bits em binário equivalem a 1 byte. Logo, em 1 byte podemos representar um número em binário até 8 bits, (255, lembrando que sempre começamos em 0).
+Devemos lembrar que em computaÃ§Ã£o, sempre estamos de uma maneira ou de outra trabalhando com binÃ¡rios. 
+EntÃ£o, 8 bits em binÃ¡rio equivalem a 1 byte. Logo, em 1 byte podemos representar um nÃºmero em binÃ¡rio atÃ© 8 bits, (255, lembrando que sempre comeÃ§amos em 0).
 
 char (character) = Guarda 1 caractere, num alcance de 256(8 bits), pesa 1 byte.
-int (integer) = Números inteiros, pode guardar números de até 4 bytes.
-float (floating) = Números em ponto flutuante, para representar reais. Tem 4 bytes. Fazer contas com números float com vírgula gera imprecisão pois os números são calculados em binário, e isso gera dízimas.
-double = Números reais também, porém com o dobro de alcance do float. Tem 8 bytes. Ainda tem problemas para calcular números com virgula. (Esses problemas só são notáveis em apps que precisam de 100% de precisão, como bancos manipulando dinheiro)
-string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determina.
+int (integer) = NÃºmeros inteiros, pode guardar nÃºmeros de atÃ© 4 bytes.
+float (floating) = NÃºmeros em ponto flutuante, para representar reais. Tem 4 bytes. Fazer contas com nÃºmeros float com vÃ­rgula gera imprecisÃ£o pois os nÃºmeros sÃ£o calculados em binÃ¡rio, e isso gera dÃ­zimas.
+double = NÃºmeros reais tambÃ©m, porÃ©m com o dobro de alcance do float. Tem 8 bytes. Ainda tem problemas para calcular nÃºmeros com virgula. (Esses problemas sÃ³ sÃ£o notÃ¡veis em apps que precisam de 100% de precisÃ£o, como bancos manipulando dinheiro)
+string = Cadeia de caracteres, tem o tamanho dependendo do que o usuÃ¡rio determina.
 
 
 %d / %i = inteiro
-%c = caractere (podemos também colocar um valor para imprimir o equivalente a ele na tabela ASCII)
+%c = caractere (podemos tambÃ©m colocar um valor para imprimir o equivalente a ele na tabela ASCII)
 %f = float
 %lf = double (long float)
 %s = string
-%p = endereço de memória em hexadecimal (pointer)
+%p = endereÃ§o de memÃ³ria em hexadecimal (pointer)
 
 
 
@@ -533,11 +533,11 @@ string = Cadeia de caracteres, tem o tamanho dependendo do que o usuário determi
  
  
  
-  							NUNCA, EU DISSE NUNCA, use goto na sua vida. Vai ferrar tudo e quebrar e você vai odiar a existência e vai xigar seu vizinho.
+  							NUNCA, EU DISSE NUNCA, use goto na sua vida. Vai ferrar tudo e quebrar e vocÃª vai odiar a existÃªncia e vai xigar seu vizinho.
  
  
  
- Fazer tudo isso escutando essa playlist: https://open.spotify.com/user/12166805913/playlist/3jIgrTbMtylVqtrKjhOaui?si=Fx0XhhLAToOSlWsD757asQ É MUITO BOM!!!!
+ Fazer tudo isso escutando essa playlist: https://open.spotify.com/user/12166805913/playlist/3jIgrTbMtylVqtrKjhOaui?si=Fx0XhhLAToOSlWsD757asQ Ã‰ MUITO BOM!!!!
  
  
  */
